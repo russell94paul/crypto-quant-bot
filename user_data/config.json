@@ -1,0 +1,131 @@
+{
+    "max_open_trades": 100,
+    "stake_currency": "BTC",
+    "stake_amount": 0.0001,
+    "tradable_balance_ratio": 0.99,
+    "fiat_display_currency": "CAD",
+    "timeframe": "1h",
+    "dry_run": false,
+    "cancel_open_orders_on_exit": false,
+    "unfilledtimeout": {
+        "buy": 10,
+        "sell": 30
+    },
+
+    "minimal_roi": {
+        "0": 0.087,
+        "131": 0.054,
+        "345": 0.026,
+        "1665": 0
+    },
+
+    "stoploss" : -0.286,
+
+    "trailing_stop" : true,
+    "trailing_stop_positive" : 0.14,
+    "trailing_stop_positive_offset" : 0.197,
+    "trailing_only_offset_is_reached" : true,
+
+    "bid_strategy": {
+        "ask_last_balance": 0.0,
+        "use_order_book": false,
+        "order_book_top": 1,
+        "check_depth_of_market": {
+            "enabled": false,
+            "bids_to_ask_delta": 1
+        }
+    },
+    "ask_strategy": {
+        "use_order_book": false,
+        "order_book_min": 1,
+        "order_book_max": 1,
+        "use_sell_signal": true,
+        "sell_profit_only": false,
+        "ignore_roi_if_buy_signal": false
+    },
+    "exchange": {
+        "name": "binance",
+        "key": "1ypEShF94CwwLdeaNCBUYGgdv7MqxNiYnJvUVDrHhKSNnfq7luOS2jhcvYJtNsr4",
+        "secret": "5ggBXhxgaLRFZypb7RPRwEYrKPwq7CNedQb4GH6g44RFw7jJLBejEJ3kdasgj9FU",
+        "ccxt_config": {"enableRateLimit": true},
+        "ccxt_async_config": {
+            "enableRateLimit": true,
+            "rateLimit": 200
+        },
+        "pair_whitelist": [
+            "ALGO/BTC",
+            "ATOM/BTC",
+            "BAT/BTC",
+            "BCH/BTC",
+            "BRD/BTC",
+            "EOS/BTC",
+            "ETH/BTC",
+            "IOTA/BTC",
+            "LINK/BTC",
+            "NEO/BTC",
+            "NXS/BTC",
+            "XMR/BTC",
+            "XRP/BTC",
+            "XTZ/BTC",
+            "DOT/BTC",
+            "YFI/BTC",
+            "SOL/BTC",
+            "AAVE/BTC",
+            "XLM/BTC",
+            "THETA/BTC",
+            "ADA/BTC",
+            "MATIC/BTC",
+            "TFUEL/BTC",
+            "XVG/BTC",
+            "LTC/BTC",
+            "UNI/BTC",
+            "WAVES/BTC",
+            "REEF/BTC",
+            "NMR/BTC"
+
+        ],
+        "pair_blacklist": [
+            "BNB/BTC"
+        ]
+    },
+    "pairlists": [
+        {"method": "StaticPairList"}
+    ],
+
+    "edge": {
+        "enabled": false,
+        "process_throttle_secs": 3600,
+        "calculate_since_number_of_days": 7,
+        "allowed_risk": 0.02,
+        "stoploss_range_min": -0.01,
+        "stoploss_range_max": -0.1,
+        "stoploss_range_step": -0.01,
+        "minimum_winrate": 0.60,
+        "minimum_expectancy": 0.20,
+        "min_trade_number": 1,
+        "max_trade_duration_minute": 1440,
+        "remove_pumps": false
+    },
+
+    "telegram": {
+        "enabled": true,
+        "token": "1837480052:AAGoam1_SB0dFDLABq8sSmcpMahzUCbbVw8",
+        "chat_id": "1727652795"
+    },
+    "api_server": {
+        "enabled": false,
+        "listen_ip_address": "127.0.0.1",
+        "listen_port": 8080,
+        "verbosity": "error",
+        "jwt_secret_key": "somethingrandom",
+        "CORS_origins": [],
+        "username": "freqtrader",
+        "password": "SuperSecurePassword"
+    },
+    "bot_name": "freqtrade",
+    "initial_state": "running",
+    "forcebuy_enable": false,
+    "internals": {
+        "process_throttle_secs": 5
+    }
+}
